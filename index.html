@@ -86,7 +86,7 @@
         }
 
         .second-half {
-            background-color: #e5e7eb;
+            background-color: #6d747d;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -107,7 +107,7 @@
             text-align: center;
         }
 
-        .info-div {
+        .card-div {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -133,7 +133,20 @@
             margin-bottom: 10px;
         }
 
-       
+        .quote-section {
+            background-color: #e5e7eb;
+            padding: 100px 400px;
+            font-size: 36px;
+            font-weight: lighter;
+        }
+
+        .quote-section .quote-source {
+            text-align: right;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        
     </style>
 </head>
 
@@ -171,7 +184,7 @@
 
         <section class="info-div-section">
             <h2>Some random information.</h2>
-            <div class="info-div">
+            <div class="card-div">
                 <div class="card">
                     <div></div>
                     <p>this is some subtext under an illustration or image</p>
@@ -191,10 +204,20 @@
             </div>
         </section>
 
+        <section class="quote-section">
+            <p class="quote-text">
+                <em>
+                    This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe
+                    people will actually read it. Who knows? All I know is that it looks nice.
+                </em>
+                <p class="quote-source">- Thor, God of Thunder</p>
+            </p>
+        </section>
+
+        
 
     </main>
 
-    
 </body>
 
 </html>
