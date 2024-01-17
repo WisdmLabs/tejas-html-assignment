@@ -1,1 +1,4 @@
-I have to built a landing page from given image and given fonts . So I have built this landing page with the help of html and css.
+Image - https://cdn.statically.io/gh/TheOdinProject/curriculum/81a5d553f4073e593d23a6ab00d50eef8620796d/foundations/html_css/project/imgs/01.png
+
+Fonts and Colors -
+https://cdn.statically.io/gh/TheOdinProject/curriculum/81a5d553f4073e593d23a6ab00d50eef8620796d/foundations/html_css/project/imgs/02.png
