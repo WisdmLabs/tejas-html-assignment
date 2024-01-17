@@ -54,7 +54,7 @@ button {
 .first-half,
 .second-half,
 .card {
-    width: 48%; /* Initially set to 48% to allow space between them on larger screens */
+    width: 48%; 
     box-sizing: border-box;
 }
 
@@ -169,8 +169,6 @@ button {
     text-align: center;
     color: #ffffff;
 }
-
-/* Media Query for smaller screens */
 @media screen and (max-width: 768px) {
     .first-half,
     .second-half,
