@@ -1,263 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>Assignment HTML</title>
     <style>
-        * {
-            font-family: 'Roboto', sans-serif;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #1F2937;
-            color: #ffffff;
-            padding: 20px 200px;
-        }
+      * {
+        font-family: 'Roboto', sans-serif;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
 
-        .header-div {
-            display: flex;
-            flex-direction: column;
-        }
+      header {
+        background-color: #1F2937;
+        color: #ffffff;
+        padding: 5vw 10vw;
+      }
 
-        .header-top {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
+      .header-div {
+        display: flex;
+        flex-direction: column;
+      }
 
-        .header-top ul {
-            display: flex;
-        }
+      .header-top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3vw;
+        align-items: center;
+      }
 
-        .header-top li {
-            margin-left: 20px;
-        }
+      .header-top ul {
+        display: flex;
+      }
 
-        .header-top li a {
-            text-decoration: none;
-            color: #e5e7eb;
-        }
+      .header-top li {
+        margin-left: 2vw;
+      }
 
-        button {
-            border: none;
-            color: #ffffff;
-            font-weight: bold;
-            background-color: #3882F6;
-            border-radius: 5px;
-            padding: 10px 28px;
-            margin-top: 15px;
-        }
+      .header-top li a {
+        text-decoration: none;
+        color: #e5e7eb;
+      }
 
-        .header-main {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-top: 4em;
-        }
+      button {
+        border: none;
+        color: #ffffff;
+        font-weight: bold;
+        background-color: #3882F6;
+        border-radius: 0.5vw;
+        padding: 1vw 2vw;
+        margin-top: 1vw;
+      }
 
-        .first-half,
-        .second-half {
-            width: calc(50% - 20px); 
-            box-sizing: border-box;
-            height: 13em;
-            margin-bottom: 5em;
-        }
+      .header-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+      }
 
-        .first-half {
-            margin-right: 20px; 
-        }
+      .first-half,
+      .second-half {
+        width: calc(50% - 2vw);
+        box-sizing: border-box;
+        height: 23vw;
+      }
 
-        .first-half h1 {
-            font-weight: bold;
-            font-size: 48px;
-            margin-bottom: 7px;
-        }
+      .first-half {
+        margin-right: 2vw;
+      }
 
-        .first-half p {
-            color: #e5e7eb;
-        }
+      .first-half h1 {
+        font-weight: bold;
+        font-size: 4vw;
+        margin-bottom: 1vw;
+      }
 
-        .second-half {
-            background-color: #6d747d;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+      .first-half p {
+        color: #e5e7eb;
+        font-size: 2vw;
+      }
 
-        .second-half p {
-            text-align: center;
-        }
+      .second-half {
+        background-color: #6d747d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-        .info-div-section {
-            padding: 0 200px 80px; 
-        }
+      .second-half p {
+        text-align: center;
+      }
 
-        .info-div-section h2 {
-            font-size: 36px;
-            font-weight: bold;
-            margin: 40px auto;
-            text-align: center;
-        }
+      .info-div-section {
+        padding: 0 10vw 8vw;
+      }
 
-        .card-div {
-            display: flex;
-            flex-wrap: wrap; 
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1000px; 
-            margin: 0 auto;
-            padding: 0 20px; 
-        }
+      .info-div-section h2 {
+        font-size: 3.6vw;
+        font-weight: bold;
+        margin: 4vw auto;
+        text-align: center;
+      }
 
-        .card {
-            width: calc(25% - 20px); 
-            text-align: center;
-            font-size: 18px;
-            display: flex;
-            flex-flow: column;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px; 
-        }
+      .card-div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2vw 0vw;
+      }
 
-        .card div {
-            width: 200px;
-            height: 200px;
-            border: 5px solid #3882f6;
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
+      .card {
+        width: calc(25% - 2vw);
+        text-align: center;
+        font-size: 1.8vw;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2vw;
+      }
 
-        .quote-section {
-            background-color: #e5e7eb;
-            padding: 100px 200px; 
-            font-size: 36px;
-            font-weight: lighter;
-        }
+      .card div {
+        width: 16vw;
+        height: 20vw;
+        border: 0.5vw solid #3882f6;
+        border-radius: 1vw;
+        margin-bottom: 1vw;
+      }
 
-        .quote-section .quote-source {
-            text-align: center; 
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 20px; 
-        }
+      .quote-section {
+        background-color: #e5e7eb;
+        padding: 10vw 10vw;
+        font-size: 3.6vw;
+        font-weight: lighter;
+      }
 
-        .action-section {
-            margin: 80px; 
-        }
+      .quote-section .quote-source {
+        text-align: center;
+        font-size: 2.4vw;
+        font-weight: bold;
+        margin-top: 2vw;
+      }
 
-        .action-card {
-            width: 600px;
-            margin: 0 auto;
-            background-color: #3882f6;
-            padding: 40px 80px;
-            display: flex;
-            justify-content: space-between;
-            border-radius: 7px;
-            color: #ffffff;
-        }
+      .action-section {
+        margin: 8vw;
+      }
 
-        .action-card button {
-            border: 2px solid #ffffff;
-        }
+      .action-card {
+        width: 60vw;
+        margin: 0 auto;
+        background-color: #3882f6;
+        padding: 4vw 8vw;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 0.7vw;
+        color: #ffffff;
+      }
 
-        .footer-section {
-            padding: 30px;
-            background-color: #1f2937;
-            text-align: center;
-            color: #ffffff;
-        }
+      .action-card .action-info {
+        flex: 1;
+      }
+
+      .action-card button {
+        border: 0.2vw solid #ffffff;
+        height: 4vw;
+        font-size: 1.1vw;
+      }
+
+      .footer-section {
+        padding: 3vw;
+        background-color: #1f2937;
+        text-align: center;
+        color: #ffffff;
+      }
     </style>
-</head>
-
-<body>
-
+  </head>
+  <body>
     <header>
-        <div class="header-div">
-            <div class="header-top">
-                <h1>Header Logo</h1>
-                <nav>
-                    <ul>
-                        <li><a href="#">header link one</a></li>
-                        <li><a href="#">header link two</a></li>
-                        <li><a href="#">header link three</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-            <div class="header-main">
-                <div class="first-half">
-                    <h1>This website is awesome</h1>
-                    <p>This website has some subtext that goes here under the main title. It's a smaller font and the color
-                        is lower contrast</p>
-                    <button>Sign up</button>
-                </div>
-
-                <div class="second-half">
-                    <p>this is a placeholder for an image</p>
-                </div>
-            </div>
+      <div class="header-div">
+        <div class="header-top">
+          <h1>Header Logo</h1>
+          <nav>
+            <ul>
+              <li>
+                <a href="#">header link one</a>
+              </li>
+              <li>
+                <a href="#">header link two</a>
+              </li>
+              <li>
+                <a href="#">header link three</a>
+              </li>
+            </ul>
+          </nav>
         </div>
+        <div class="header-main">
+          <div class="first-half">
+            <h1>This website is awesome</h1>
+            <p>This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast</p>
+            <button>Sign up</button>
+          </div>
+          <div class="second-half">
+            <p>this is a placeholder for an image</p>
+          </div>
+        </div>
+      </div>
     </header>
-
     <main>
-
-        <section class="info-div-section">
-            <h2>Some random information.</h2>
-            <div class="card-div">
-                <div class="card">
-                    <div></div>
-                    <p>this is some subtext under an illustration or image</p>
-                </div>
-                <div class="card">
-                    <div></div>
-                    <p>this is some subtext under an illustration or image</p>
-                </div>
-                <div class="card">
-                    <div></div>
-                    <p>this is some subtext under an illustration or image</p>
-                </div>
-                <div class="card">
-                    <div></div>
-                    <p>this is some subtext under an illustration or image</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="quote-section">
-            <p class="quote-text">
-                <em>
-                    This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe
-                    people will actually read it. Who knows? All I know is that it looks nice.
-                </em>
-            </p>
-            <p class="quote-source">- Thor, God of Thunder</p>
-        </section>
-
-        <section class="action-section">
-            <div class="action-card">
-                <div class="action-info">
-                    <h3>Call to action! It's time!</h3>
-                    <p>Sign up for our product by clicking that button right over there!</p>
-                </div>
-                <button>Sign up</button>
-            </div>
-        </section>
-
+      <section class="info-div-section">
+        <h2>Some random information.</h2>
+        <div class="card-div">
+          <div class="card">
+            <div></div>
+            <p>this is some subtext under an illustration or image</p>
+          </div>
+          <div class="card">
+            <div></div>
+            <p>this is some subtext under an illustration or image</p>
+          </div>
+          <div class="card">
+            <div></div>
+            <p>this is some subtext under an illustration or image</p>
+          </div>
+          <div class="card">
+            <div></div>
+            <p>this is some subtext under an illustration or image</p>
+          </div>
+        </div>
+      </section>
+      <section class="quote-section">
+        <p class="quote-text">
+          <em> This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice. </em>
+        </p>
+        <p class="quote-source">- Thor, God of Thunder</p>
+      </section>
+      <section class="action-section">
+        <div class="action-card">
+          <div class="action-info">
+            <h3>Call to action! It's time!</h3>
+            <p>Sign up for our product by clicking that button right over there!</p>
+          </div>
+          <button>Sign up</button>
+        </div>
+      </section>
     </main>
-
     <footer class="footer-section">
-        <p>Copyright &copy; The Odin Project 2021</p>
+      <p>Copyright &copy; The Odin Project 2021</p>
     </footer>
-</body>
-
+  </body>
 </html>
-
