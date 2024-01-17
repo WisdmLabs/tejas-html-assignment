@@ -1,8 +1,199 @@
-<html>
-    <head>
-        <title>Welcome to Assignment</title>
-    </head>
-    <body>
-        <h1>Success!  The Assignment virtual host is working!</h1>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Assignment HTML</title>
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            border: none;
+            color: #ffffff;
+            font-weight: bold;
+            background-color: #3882F6;
+            border-radius: 5px;
+            padding: 9px 27px;
+            margin-top: 15px;
+        }
+
+        header {
+            background-color: #1F2937;
+            color: #ffffff;
+            padding: 20px 200px;
+        }
+
+        .header-div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .header-top ul {
+            display: flex;
+        }
+
+        .header-top li {
+            margin-left: 20px;
+        }
+
+        .header-top li a {
+            text-decoration: none;
+            color: #e5e7eb;
+        }
+
+        .header-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 4em;
+        }
+
+        .first-half,
+        .second-half {
+            width: 47%;
+            box-sizing: border-box;
+            height: 13em;
+            margin-bottom: 5em;
+        }
+
+        .first-half {
+            margin-right: 5%;
+        }
+
+        .first-half h1 {
+            font-weight: bold;
+            font-size: 48px;
+            margin-bottom: 7px;
+        }
+
+        .first-half p {
+            color: #e5e7eb;
+        }
+
+        .second-half {
+            background-color: #e5e7eb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .second-half p {
+            text-align: center;
+        }
+
+        .card-div-section {
+            padding: 0 80px 80px;
+        }
+
+        .card-div-section h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .card-div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .card-div #card {
+            width: 200px;
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-div #card div {
+            width: 200px;
+            height: 200px;
+            border: 5px solid #3882f6;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+      
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-div">
+            <div class="header-top">
+                <h1>Header Logo</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">header link one</a></li>
+                        <li><a href="#">header link two</a></li>
+                        <li><a href="#">header link three</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header-main">
+                <div class="first-half">
+                    <h1>This website is awesome</h1>
+                    <p>This website has some subtext that goes here under the main title. It's a smaller font and the color
+                        is lower contrast</p>
+                    <button>Sign up</button>
+                </div>
+
+                <div class="second-half">
+                    <p>this is a placeholder for an image</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="card-div-section">
+            <h2>Some random information.</h2>
+            <div class="card-div">
+                <div id="card">
+                    <div></div>
+                    <p>this is some subtext under an illustration or image</p>
+                </div>
+                <div id="card">
+                    <div></div>
+                    <p>this is some subtext under an illustration or image</p>
+                </div>
+                <div id="card">
+                    <div></div>
+                    <p>this is some subtext under an illustration or image</p>
+                </div>
+                <div id="card">
+                    <div></div>
+                    <p>this is some subtext under an illustration or image</p>
+                </div>
+            </div>
+        </section>
+
+     
+</body>
+
 </html>
+
