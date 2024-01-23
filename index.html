@@ -1,85 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="index.css">
-    <title>Assignment HTML</title>
-  </head>
-  <body>
-    <header>
-      <div class="header-div">
-        <div class="header-top">
-          <h1>Header Logo</h1>
-          <nav>
-            <ul>
-              <li>
-                <a href="#">header link one</a>
-              </li>
-              <li>
-                <a href="#">header link two</a>
-              </li>
-              <li>
-                <a href="#">header link three</a>
-              </li>
-            </ul>
-          </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+  <title>Navigation Bar</title>
+</head>
+<body>
+  <div class="navbar-container">
+    <div id="logo">Logo</div>
+    <nav class="navbar">
+      <div class="nav-actions">
+        <div class="nav-search">
+          <i class="fa fa-search"></i>Search
         </div>
-        <div class="header-main">
-          <div class="first-half">
-            <h1>This website is awesome</h1>
-            <p>This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast</p>
-            <button>Sign up</button>
-          </div>
-          <div class="second-half">
-            <p>this is a placeholder for an image</p>
-          </div>
+        <div class="nav-user">
+          <i class="fa fa-user"></i>User
         </div>
+        <div class="nav-cart">
+          <i class="fa fa-cart"></i>(0)
+        </div>
+      </div><br>
+      <div class="nav-links">
+        <li class="nav-item"><a href="#" class="nav-link">Classes</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Programs & Events</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Blogs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Get Involved</a></li>
+        <li class="nav-item"><button class="btn-find-class">Find a Class</button></li>
       </div>
-    </header>
-    <main>
-      <section class="info-div-section">
-        <h2>Some random information.</h2>
-        <div class="card-div">
-          <div class="card">
-            <div></div>
-            <p>this is some subtext under an illustration or image</p>
-          </div>
-          <div class="card">
-            <div></div>
-            <p>this is some subtext under an illustration or image</p>
-          </div>
-          <div class="card">
-            <div></div>
-            <p>this is some subtext under an illustration or image</p>
-          </div>
-          <div class="card">
-            <div></div>
-            <p>this is some subtext under an illustration or image</p>
-          </div>
+      
+    </nav>
+  </div>
+  <div class="workshop-container">
+    <div class="workshop-header">
+      <h1>Let's Begin Here: Approaching <br>Craft in Fiction Through Character</h1>
+      <div class="workshop-tags">
+        <span class="tag instructor"><i class="fa fa-user" style="color:#4eafcd;"></i>&nbsp;&nbsp;David William Hill</span>
+        <span class="tag category">Fiction</span>
+        <span class="tag level">Advanced</span>
+      </div>
+    </div>
+    <div class="workshop-pricing-signup">
+      <div class="pricing">
+        <div class="price-member">
+          <div class="price">$200</div><br>
+          <div class="label">Member</div>
         </div>
-      </section>
-      <section class="quote-section">
-        <p class="quote-text">
-          <em> This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice. </em>
-        </p>
-        <p class="quote-source">- Thor, God of Thunder</p>
-      </section>
-      <section class="action-section">
-        <div class="action-card">
-          <div class="action-info">
-            <h3>Call to action! It's time!</h3>
-            <p>Sign up for our product by clicking that button right over there!</p>
-          </div>
-          <button>Sign up</button>
+        <div class="price-non-member">
+          <div class="price">$259</div><br>
+          <div class="label">Non-Member</div>
         </div>
-      </section>
-    </main>
-    <footer class="footer-section">
-      <p>Copyright &copy; The Odin Project 2021</p>
-    </footer>
-  </body>
+      </div>     
+       <button class="btn-signup">Sign Up</button>
+    </div><br><br>
+
+    <div class="signup">
+      <a href="#" class="link-reduced-rate">Apply for Reduced-Rate Spot</a>
+    </div><br><br>
+    <div class="workshop-details">
+      <div class="workshop-dates" style="padding-right:18em;border-right: 1px solid #000;">
+        <p><i class="fa fa-calendar"></i>Jan 05 - Feb 15 <span style="color:red;">(5 Wednesdays)</span><br>10:00am - 4:00pm (PST)</p>
+      </div>
+      <div class="workshop-location" style="padding-right:5em;border-right: 1px solid #000;">
+        <p><i class="fa fa-map-marker"></i>2042 Balboa St.,<br>San Francisco, CA 94121</p>
+      </div>
+      <div class="workshop-deadline">
+        <p><i class="fa fa-clock-o"></i>Registration deadline:<br>May 07 at 10:30am (PST)</p>
+      </div>
+    </div>
+    
+  </div>
+</body>
 </html>
