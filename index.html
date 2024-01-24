@@ -1,184 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="index.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
-      <title>Navigation Bar</title>
-      <script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Navigation Bar</title>
+    <script>
       const slide = document.getElementById('carouselSlide');
-        let index = 0;
-
-        document.getElementById('nextBtn').addEventListener('click', () => {
-          if (index < slide.childElementCount - 1) {
-            index++;
-            slide.style.transform = `translateX(${-index * 100}%)`;
-          }
-        });
-
-        document.getElementById('prevBtn').addEventListener('click', () => {
-          if (index > 0) {
-            index--;
-            slide.style.transform = `translateX(${-index * 100}%)`;
-          }
-        });
-      </script>
+      let index = 0;
+      document.getElementById('nextBtn').addEventListener('click', () => {
+        if (index < slide.childElementCount - 1) {
+          index++;
+          slide.style.transform = `translateX(${-index * 100}%)`;
+        }
+      });
+      document.getElementById('prevBtn').addEventListener('click', () => {
+        if (index > 0) {
+          index--;
+          slide.style.transform = `translateX(${-index * 100}%)`;
+        }
+      });
+    </script>
   </head>
   <body>
-      <div class="navbar-container">
-        <div id="logo">Logo</div>
-        <nav class="navbar">
-            <div class="nav-actions">
-              <div class="nav-search">
-                  <i class="fa fa-search"></i>Search
-              </div>
-              <div class="nav-user">
-                  <i class="fa fa-user"></i>User
-              </div>
-              <div class="nav-cart">
-                  <i class="fa fa-cart"></i>(0)
-              </div>
-            </div>
-            <br>
-            <div class="nav-links">
-              <li class="nav-item"><a href="#" class="nav-link">Classes</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Programs & Events</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Blogs</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Get Involved</a></li>
-              <li class="nav-item"><button class="btn-find-class">Find a Class</button></li>
-            </div>
-        </nav>
-      </div>
-      <div class="workshop-container">
-        <div class="workshop-header">
-            <h1>Let's Begin Here: Approaching <br>Craft in Fiction Through Character</h1>
-            <div class="workshop-tags">
-              <span class="tag instructor"><i class="fa fa-user" style="color:#4eafcd;"></i>&nbsp;&nbsp;David William Hill</span>
-              <span class="tag category">Fiction</span>
-              <span class="tag level">Advanced</span>
-            </div>
-        </div>
-        <div class="workshop-pricing-signup">
-            <div class="pricing">
-              <div class="price-member">
-                  <div class="price">$200</div>
-                  <br>
-                  <div class="label">Member</div>
-              </div>
-              <div class="price-non-member">
-                  <div class="price">$259</div>
-                  <br>
-                  <div class="label">Non-Member</div>
-              </div>
-            </div>
-            <button class="btn-signup">Sign Up</button>
-        </div>
-        <br><br>
-        <div class="signup">
-            <a href="#" class="link-reduced-rate">Apply for Reduced-Rate Spot</a>
-        </div>
-        <br><br>
-        <div class="workshop-details">
-            <div class="workshop-dates" style="padding-right:18em;border-right: 1px solid #000;">
-              <p><i class="fa fa-calendar"></i>Jan 05 - Feb 15 <span style="color:red;">(5 Wednesdays)</span><br>10:00am - 4:00pm (PST)</p>
-            </div>
-            <div class="workshop-location" style="padding-right:5em;border-right: 1px solid #000;">
-              <p><i class="fa fa-map-marker"></i>2042 Balboa St.,<br>San Francisco, CA 94121</p>
-            </div>
-            <div class="workshop-deadline">
-              <p><i class="fa fa-clock-o"></i>Registration deadline: <br>May 07 at 10:30am (PST)</p>
-            </div>
-        </div>
-      </div>
-
-
-      <div class="workshop-info">
-
-        <div class="first-half">
-                <p class="text">In order to write, one must read constantly, observe the world well, and take seriously the craft of writing. During this five-week course, we will focus on the last of these, the craft of writing—specifically, we will focus on three mainstays of fiction: character, dialogue, and scene.<br><br>
-                  “I think that writers often feel more comfortable writing exposition and summary than scene, perhaps because in our own lives we often feel more comfortable observing than engaging, and scene is about getting our characters to engage,” says instructor Lori Ostlund. “In this class we will focus on creating scenes as a way to develop characters, demonstrate changes in them, and increase tension.<br><br>
-                  “We will also spend a lot of time on dialogue, thinking about it as a way to reveal character and relationships and, perhaps most important, as a way to reveal the shifting power dynamics that are at work in those relationships and which create tension.”<br><br>
-                  We will look at examples from short stories and novels and engage in in-class exercises that focus on these three craft building blocks. Participants will use these exercises to create work at home, which we will workshop during the last two weeks of class. “My goal,” Lori says, “is for us to think about these craft elements in ways that are new and generative.”
-                </p>
-                <br><br><br><br>
-                <p style="font-size: 18px;line-height: 27px;padding-left:1em;">
-                  Share &nbsp;&nbsp;&nbsp;&nbsp;
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM13.2508 12.5271V19.0557H10.5495V12.5274H9.2V10.2776H10.5495V8.92678C10.5495 7.0914 11.3116 6 13.4766 6H15.279V8.25006H14.1524C13.3096 8.25006 13.2538 8.56447 13.2538 9.15125L13.2508 10.2773H15.2918L15.053 12.5271H13.2508Z" fill="#434343"/>
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM13.2508 12.5271V19.0557H10.5495V12.5274H9.2V10.2776H10.5495V8.92678C10.5495 7.0914 11.3116 6 13.4766 6H15.279V8.25006H14.1524C13.3096 8.25006 13.2538 8.56447 13.2538 9.15125L13.2508 10.2773H15.2918L15.053 12.5271H13.2508Z" fill="white" fill-opacity="0.5"/>
-                  </svg>
-                  &nbsp;&nbsp;&nbsp;
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM11.6658 10.169L11.6406 9.75375C11.5651 8.67755 12.2282 7.69456 13.2774 7.31323C13.6635 7.17765 14.3182 7.1607 14.7463 7.27934C14.9142 7.33018 15.2331 7.49966 15.4598 7.65219L15.8711 7.93184L16.3243 7.78778C16.5761 7.71151 16.9119 7.5844 17.063 7.49966C17.2057 7.42339 17.3316 7.38102 17.3316 7.40645C17.3316 7.5505 17.021 8.042 16.7608 8.31317C16.4083 8.6945 16.509 8.72839 17.2224 8.47417C17.6505 8.33011 17.6589 8.33011 17.575 8.49112C17.5246 8.57586 17.2644 8.87245 16.9874 9.14362C16.5174 9.60969 16.4922 9.66054 16.4922 10.0503C16.4922 10.652 16.2068 11.9062 15.9214 12.5925C15.3926 13.8806 14.2595 15.211 13.1263 15.8805C11.5315 16.8211 9.40786 17.0584 7.61999 16.5075C7.02404 16.3211 6 15.8466 6 15.7618C6 15.7364 6.31057 15.7025 6.68829 15.694C7.4773 15.6771 8.26631 15.4568 8.93781 15.067L9.39108 14.7958L8.87066 14.6178C8.13201 14.3636 7.46891 13.7789 7.30103 13.2281C7.25067 13.0501 7.26746 13.0417 7.73751 13.0417L8.22434 13.0332L7.81305 12.8383C7.32621 12.5925 6.88134 12.1773 6.66311 11.7536C6.50362 11.4486 6.30218 10.6774 6.36093 10.6181C6.37772 10.5927 6.55399 10.6435 6.75544 10.7113C7.33461 10.9232 7.41015 10.8723 7.0744 10.5164C6.44487 9.87239 6.25181 8.91482 6.55399 8.0081L6.69668 7.60135L7.25067 8.15216C8.38383 9.26226 9.71843 9.92323 11.2461 10.1181L11.6658 10.169Z" fill="#434343"/>
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM11.6658 10.169L11.6406 9.75375C11.5651 8.67755 12.2282 7.69456 13.2774 7.31323C13.6635 7.17765 14.3182 7.1607 14.7463 7.27934C14.9142 7.33018 15.2331 7.49966 15.4598 7.65219L15.8711 7.93184L16.3243 7.78778C16.5761 7.71151 16.9119 7.5844 17.063 7.49966C17.2057 7.42339 17.3316 7.38102 17.3316 7.40645C17.3316 7.5505 17.021 8.042 16.7608 8.31317C16.4083 8.6945 16.509 8.72839 17.2224 8.47417C17.6505 8.33011 17.6589 8.33011 17.575 8.49112C17.5246 8.57586 17.2644 8.87245 16.9874 9.14362C16.5174 9.60969 16.4922 9.66054 16.4922 10.0503C16.4922 10.652 16.2068 11.9062 15.9214 12.5925C15.3926 13.8806 14.2595 15.211 13.1263 15.8805C11.5315 16.8211 9.40786 17.0584 7.61999 16.5075C7.02404 16.3211 6 15.8466 6 15.7618C6 15.7364 6.31057 15.7025 6.68829 15.694C7.4773 15.6771 8.26631 15.4568 8.93781 15.067L9.39108 14.7958L8.87066 14.6178C8.13201 14.3636 7.46891 13.7789 7.30103 13.2281C7.25067 13.0501 7.26746 13.0417 7.73751 13.0417L8.22434 13.0332L7.81305 12.8383C7.32621 12.5925 6.88134 12.1773 6.66311 11.7536C6.50362 11.4486 6.30218 10.6774 6.36093 10.6181C6.37772 10.5927 6.55399 10.6435 6.75544 10.7113C7.33461 10.9232 7.41015 10.8723 7.0744 10.5164C6.44487 9.87239 6.25181 8.91482 6.55399 8.0081L6.69668 7.60135L7.25067 8.15216C8.38383 9.26226 9.71843 9.92323 11.2461 10.1181L11.6658 10.169Z" fill="white" fill-opacity="0.5"/>
-                  </svg>
-                  &nbsp;&nbsp;
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM5.76084 9.93892H8.4803V18.1098H5.76084V9.93892ZM8.65938 7.41135C8.64173 6.6102 8.06883 6 7.13852 6C6.20821 6 5.6 6.6102 5.6 7.41135C5.6 8.1959 6.19023 8.82367 7.10322 8.82367H7.12059C8.06883 8.82367 8.65938 8.1959 8.65938 7.41135ZM15.1566 9.74707C16.9461 9.74707 18.2877 10.9151 18.2877 13.4249L18.2876 18.1098H15.5682V13.7384C15.5682 12.6404 15.1747 11.8911 14.1902 11.8911C13.4389 11.8911 12.9914 12.3962 12.7949 12.8841C12.723 13.0589 12.7053 13.3025 12.7053 13.5467V18.11H9.98555C9.98555 18.11 10.0214 10.7059 9.98555 9.93915H12.7053V11.0965C13.0663 10.5401 13.7127 9.74707 15.1566 9.74707Z" fill="#434343"/>
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM5.76084 9.93892H8.4803V18.1098H5.76084V9.93892ZM8.65938 7.41135C8.64173 6.6102 8.06883 6 7.13852 6C6.20821 6 5.6 6.6102 5.6 7.41135C5.6 8.1959 6.19023 8.82367 7.10322 8.82367H7.12059C8.06883 8.82367 8.65938 8.1959 8.65938 7.41135ZM15.1566 9.74707C16.9461 9.74707 18.2877 10.9151 18.2877 13.4249L18.2876 18.1098H15.5682V13.7384C15.5682 12.6404 15.1747 11.8911 14.1902 11.8911C13.4389 11.8911 12.9914 12.3962 12.7949 12.8841C12.723 13.0589 12.7053 13.3025 12.7053 13.5467V18.11H9.98555C9.98555 18.11 10.0214 10.7059 9.98555 9.93915H12.7053V11.0965C13.0663 10.5401 13.7127 9.74707 15.1566 9.74707Z" fill="white" fill-opacity="0.5"/>
-                  </svg>
-                  &nbsp;&nbsp;
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" style="height:20px;width:20px;background-color:#a1a1a1;border-radius:50%;">
-                      <path d="M14.1667 5.83331H11.6667C11.2083 5.83331 10.8333 6.20831 10.8333 6.66665C10.8333 7.12498 11.2083 7.49998 11.6667 7.49998H14.1667C15.5417 7.49998 16.6667 8.62498 16.6667 9.99998C16.6667 11.375 15.5417 12.5 14.1667 12.5H11.6667C11.2083 12.5 10.8333 12.875 10.8333 13.3333C10.8333 13.7916 11.2083 14.1666 11.6667 14.1666H14.1667C16.4667 14.1666 18.3333 12.3 18.3333 9.99998C18.3333 7.69998 16.4667 5.83331 14.1667 5.83331ZM6.66666 9.99998C6.66666 10.4583 7.04166 10.8333 7.49999 10.8333H12.5C12.9583 10.8333 13.3333 10.4583 13.3333 9.99998C13.3333 9.54165 12.9583 9.16665 12.5 9.16665H7.49999C7.04166 9.16665 6.66666 9.54165 6.66666 9.99998ZM8.33332 12.5H5.83332C4.45832 12.5 3.33332 11.375 3.33332 9.99998C3.33332 8.62498 4.45832 7.49998 5.83332 7.49998H8.33332C8.79166 7.49998 9.16666 7.12498 9.16666 6.66665C9.16666 6.20831 8.79166 5.83331 8.33332 5.83331H5.83332C3.53332 5.83331 1.66666 7.69998 1.66666 9.99998C1.66666 12.3 3.53332 14.1666 5.83332 14.1666H8.33332C8.79166 14.1666 9.16666 13.7916 9.16666 13.3333C9.16666 12.875 8.79166 12.5 8.33332 12.5Z" fill="white"/>
-                  </svg>
-                </p>
-            <br><br>
-            <svg xmlns="http://www.w3.org/2000/svg" width="636" height="2" viewBox="0 0 636 2" fill="none" style="color:var(--Divider, #828282);width:636px;">
-              <path d="M0 1H636" stroke="#828282" stroke-width="0.8"/>
-            </svg>
-            <div class="class-schedule-container">
-                <h2>Class Schedule</h2>
-                <div class="class-time">
-                    <span>Time:</span> 10:30am - 4:00pm (PST)
-                </div>
-                <div class="class-dates">
-                    <span>Dates:</span>
-                    <div class="dates-list">
-                      <div class="date-item">Tue 6/15</div>
-                      <div class="date-item">Tue 6/20</div>
-                      <div class="date-item">Tue 6/24</div>
-                      <div class="date-item">Tue 6/20</div>
-                      <div class="date-item">Tue 6/24</div>
-                    </div>
-                </div>
-            </div>
-            <br><br>
-        </div>
-        
-        <div class="second-half">
-              <img src="https://cdn.pixabay.com/photo/2023/10/30/07/30/lake-8352059_1280.jpg"><br><br>
-              <span style="color:#00ACB4;">John Doe</span> , MFA, writes fiction and nonfiction with a special emphasis on the power of place. Her work has been anthologized and published in venues such as Atlas Obscura, The Los Angeles Times, The Sun, and Best Women’s Travel Writing. She loves to see her students surprise and delight themselves (and others!), whether she’s teaching at City University of New York, the San Francisco Women’s Jail, or The Writing Salon. After many years of living abroad (from Oaxaca to Quito to San Jose, Costa Rica), she now lives in San Francisco. She is also the author of Living Abroad in Costa Rica.
-              <br><br><br><br><br>
-              <button class="reviews-button">See John’s Reviews</button>
-              <br><br><br><br><br><br><br><br><br><br><br><br><br>
-        </div>
-
-      </div>
-
-
-      <div class="carousel-container">
-        <div class="carousel-slide" id="carouselSlide">
-          <div class="carousel-item">
-            <button class="carousel-button" id="prevBtn">&#10094;</button>
-            <div class="testimonial-text-container">
-              <p class="testimonial-text">
-                Erin was a wonderful teacher. She was personable, kind, organized, and great with facilitating group discussion.<br><br>
-                <span class="author">Katy L.</span>
-              </p>
-              
-              <div class="testimonial-quote quote-right">”</div>
-            </div>
-            <button class="carousel-button" id="nextBtn">&#10095;</button>
+    <div class="navbar-container">
+      <div id="logo">Logo</div>
+      <nav class="navbar">
+        <div class="nav-actions">
+          <div class="nav-search">
+            <i class="fa fa-search"></i>Search
           </div>
-          
+          <div class="nav-user">
+            <i class="fa fa-user"></i>User
+          </div>
+          <div class="nav-cart">
+            <i class="fa fa-cart"></i>(0)
+          </div>
         </div>
-      </div>     
-         <br><br><br><br><br><br>
+        <br>
+        <div class="nav-links">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Classes</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Programs & Events</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Get Involved</a>
+          </li>
+          <li class="nav-item">
+            <button class="btn-find-class">Find a Class</button>
+          </li>
+        </div>
+      </nav>
+    </div>
+    <div class="workshop-container">
+      <div class="workshop-header">
+        <h1>Let's Begin Here: Approaching <br>Craft in Fiction Through Character </h1>
+        <div class="workshop-tags">
+          <span class="tag instructor">
+            <i class="fa fa-user" style="color:#4eafcd;"></i>&nbsp;&nbsp;David William Hill </span>
+          <span class="tag category">Fiction</span>
+          <span class="tag level">Advanced</span>
+        </div>
+      </div>
+      <div class="workshop-pricing-signup">
+        <div class="pricing">
+          <div class="price-member">
+            <div class="price">$200</div>
+            <br>
+            <div class="label">Member</div>
+          </div>
+          <div class="price-non-member">
+            <div class="price">$259</div>
+            <br>
+            <div class="label">Non-Member</div>
+          </div>
+        </div>
+        <button class="btn-signup">Sign Up</button>
+      </div>
+      <br>
+      <br>
+      <div class="signup">
+        <a href="#" class="link-reduced-rate">Apply for Reduced-Rate Spot</a>
+      </div>
+      <br>
+      <br>
+      <div class="workshop-details">
+        <div class="workshop-dates" style="padding-right:18em;border-right: 1px solid #000;">
+          <p>
+            <i class="fa fa-calendar"></i>Jan 05 - Feb 15 <span style="color:red;">(5 Wednesdays)</span>
+            <br>10:00am - 4:00pm (PST)
+          </p>
+        </div>
+        <div class="workshop-location" style="padding-right:5em;border-right: 1px solid #000;">
+          <p>
+            <i class="fa fa-map-marker"></i>2042 Balboa St., <br>San Francisco, CA 94121
+          </p>
+        </div>
+        <div class="workshop-deadline">
+          <p>
+            <i class="fa fa-clock-o"></i>Registration deadline: <br>May 07 at 10:30am (PST)
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="workshop-info">
+      <div class="first-half">
+        <p class="text">In order to write, one must read constantly, observe the world well, and take seriously the craft of writing. During this five-week course, we will focus on the last of these, the craft of writing—specifically, we will focus on three mainstays of fiction: character, dialogue, and scene. <br>
+          <br> “I think that writers often feel more comfortable writing exposition and summary than scene, perhaps because in our own lives we often feel more comfortable observing than engaging, and scene is about getting our characters to engage,” says instructor Lori Ostlund. “In this class we will focus on creating scenes as a way to develop characters, demonstrate changes in them, and increase tension. <br>
+          <br> “We will also spend a lot of time on dialogue, thinking about it as a way to reveal character and relationships and, perhaps most important, as a way to reveal the shifting power dynamics that are at work in those relationships and which create tension.” <br>
+          <br> We will look at examples from short stories and novels and engage in in-class exercises that focus on these three craft building blocks. Participants will use these exercises to create work at home, which we will workshop during the last two weeks of class. “My goal,” Lori says, “is for us to think about these craft elements in ways that are new and generative.”
+        </p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p style="font-size: 18px;line-height: 27px;padding-left:1em;"> Share &nbsp;&nbsp;&nbsp;&nbsp; <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM13.2508 12.5271V19.0557H10.5495V12.5274H9.2V10.2776H10.5495V8.92678C10.5495 7.0914 11.3116 6 13.4766 6H15.279V8.25006H14.1524C13.3096 8.25006 13.2538 8.56447 13.2538 9.15125L13.2508 10.2773H15.2918L15.053 12.5271H13.2508Z" fill="#434343" />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM13.2508 12.5271V19.0557H10.5495V12.5274H9.2V10.2776H10.5495V8.92678C10.5495 7.0914 11.3116 6 13.4766 6H15.279V8.25006H14.1524C13.3096 8.25006 13.2538 8.56447 13.2538 9.15125L13.2508 10.2773H15.2918L15.053 12.5271H13.2508Z" fill="white" fill-opacity="0.5" />
+          </svg> &nbsp;&nbsp;&nbsp; <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM11.6658 10.169L11.6406 9.75375C11.5651 8.67755 12.2282 7.69456 13.2774 7.31323C13.6635 7.17765 14.3182 7.1607 14.7463 7.27934C14.9142 7.33018 15.2331 7.49966 15.4598 7.65219L15.8711 7.93184L16.3243 7.78778C16.5761 7.71151 16.9119 7.5844 17.063 7.49966C17.2057 7.42339 17.3316 7.38102 17.3316 7.40645C17.3316 7.5505 17.021 8.042 16.7608 8.31317C16.4083 8.6945 16.509 8.72839 17.2224 8.47417C17.6505 8.33011 17.6589 8.33011 17.575 8.49112C17.5246 8.57586 17.2644 8.87245 16.9874 9.14362C16.5174 9.60969 16.4922 9.66054 16.4922 10.0503C16.4922 10.652 16.2068 11.9062 15.9214 12.5925C15.3926 13.8806 14.2595 15.211 13.1263 15.8805C11.5315 16.8211 9.40786 17.0584 7.61999 16.5075C7.02404 16.3211 6 15.8466 6 15.7618C6 15.7364 6.31057 15.7025 6.68829 15.694C7.4773 15.6771 8.26631 15.4568 8.93781 15.067L9.39108 14.7958L8.87066 14.6178C8.13201 14.3636 7.46891 13.7789 7.30103 13.2281C7.25067 13.0501 7.26746 13.0417 7.73751 13.0417L8.22434 13.0332L7.81305 12.8383C7.32621 12.5925 6.88134 12.1773 6.66311 11.7536C6.50362 11.4486 6.30218 10.6774 6.36093 10.6181C6.37772 10.5927 6.55399 10.6435 6.75544 10.7113C7.33461 10.9232 7.41015 10.8723 7.0744 10.5164C6.44487 9.87239 6.25181 8.91482 6.55399 8.0081L6.69668 7.60135L7.25067 8.15216C8.38383 9.26226 9.71843 9.92323 11.2461 10.1181L11.6658 10.169Z" fill="#434343" />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM11.6658 10.169L11.6406 9.75375C11.5651 8.67755 12.2282 7.69456 13.2774 7.31323C13.6635 7.17765 14.3182 7.1607 14.7463 7.27934C14.9142 7.33018 15.2331 7.49966 15.4598 7.65219L15.8711 7.93184L16.3243 7.78778C16.5761 7.71151 16.9119 7.5844 17.063 7.49966C17.2057 7.42339 17.3316 7.38102 17.3316 7.40645C17.3316 7.5505 17.021 8.042 16.7608 8.31317C16.4083 8.6945 16.509 8.72839 17.2224 8.47417C17.6505 8.33011 17.6589 8.33011 17.575 8.49112C17.5246 8.57586 17.2644 8.87245 16.9874 9.14362C16.5174 9.60969 16.4922 9.66054 16.4922 10.0503C16.4922 10.652 16.2068 11.9062 15.9214 12.5925C15.3926 13.8806 14.2595 15.211 13.1263 15.8805C11.5315 16.8211 9.40786 17.0584 7.61999 16.5075C7.02404 16.3211 6 15.8466 6 15.7618C6 15.7364 6.31057 15.7025 6.68829 15.694C7.4773 15.6771 8.26631 15.4568 8.93781 15.067L9.39108 14.7958L8.87066 14.6178C8.13201 14.3636 7.46891 13.7789 7.30103 13.2281C7.25067 13.0501 7.26746 13.0417 7.73751 13.0417L8.22434 13.0332L7.81305 12.8383C7.32621 12.5925 6.88134 12.1773 6.66311 11.7536C6.50362 11.4486 6.30218 10.6774 6.36093 10.6181C6.37772 10.5927 6.55399 10.6435 6.75544 10.7113C7.33461 10.9232 7.41015 10.8723 7.0744 10.5164C6.44487 9.87239 6.25181 8.91482 6.55399 8.0081L6.69668 7.60135L7.25067 8.15216C8.38383 9.26226 9.71843 9.92323 11.2461 10.1181L11.6658 10.169Z" fill="white" fill-opacity="0.5" />
+          </svg> &nbsp;&nbsp; <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM5.76084 9.93892H8.4803V18.1098H5.76084V9.93892ZM8.65938 7.41135C8.64173 6.6102 8.06883 6 7.13852 6C6.20821 6 5.6 6.6102 5.6 7.41135C5.6 8.1959 6.19023 8.82367 7.10322 8.82367H7.12059C8.06883 8.82367 8.65938 8.1959 8.65938 7.41135ZM15.1566 9.74707C16.9461 9.74707 18.2877 10.9151 18.2877 13.4249L18.2876 18.1098H15.5682V13.7384C15.5682 12.6404 15.1747 11.8911 14.1902 11.8911C13.4389 11.8911 12.9914 12.3962 12.7949 12.8841C12.723 13.0589 12.7053 13.3025 12.7053 13.5467V18.11H9.98555C9.98555 18.11 10.0214 10.7059 9.98555 9.93915H12.7053V11.0965C13.0663 10.5401 13.7127 9.74707 15.1566 9.74707Z" fill="#434343" />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM5.76084 9.93892H8.4803V18.1098H5.76084V9.93892ZM8.65938 7.41135C8.64173 6.6102 8.06883 6 7.13852 6C6.20821 6 5.6 6.6102 5.6 7.41135C5.6 8.1959 6.19023 8.82367 7.10322 8.82367H7.12059C8.06883 8.82367 8.65938 8.1959 8.65938 7.41135ZM15.1566 9.74707C16.9461 9.74707 18.2877 10.9151 18.2877 13.4249L18.2876 18.1098H15.5682V13.7384C15.5682 12.6404 15.1747 11.8911 14.1902 11.8911C13.4389 11.8911 12.9914 12.3962 12.7949 12.8841C12.723 13.0589 12.7053 13.3025 12.7053 13.5467V18.11H9.98555C9.98555 18.11 10.0214 10.7059 9.98555 9.93915H12.7053V11.0965C13.0663 10.5401 13.7127 9.74707 15.1566 9.74707Z" fill="white" fill-opacity="0.5" />
+          </svg> &nbsp;&nbsp; <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" style="height:20px;width:20px;background-color:#a1a1a1;border-radius:50%;">
+            <path d="M14.1667 5.83331H11.6667C11.2083 5.83331 10.8333 6.20831 10.8333 6.66665C10.8333 7.12498 11.2083 7.49998 11.6667 7.49998H14.1667C15.5417 7.49998 16.6667 8.62498 16.6667 9.99998C16.6667 11.375 15.5417 12.5 14.1667 12.5H11.6667C11.2083 12.5 10.8333 12.875 10.8333 13.3333C10.8333 13.7916 11.2083 14.1666 11.6667 14.1666H14.1667C16.4667 14.1666 18.3333 12.3 18.3333 9.99998C18.3333 7.69998 16.4667 5.83331 14.1667 5.83331ZM6.66666 9.99998C6.66666 10.4583 7.04166 10.8333 7.49999 10.8333H12.5C12.9583 10.8333 13.3333 10.4583 13.3333 9.99998C13.3333 9.54165 12.9583 9.16665 12.5 9.16665H7.49999C7.04166 9.16665 6.66666 9.54165 6.66666 9.99998ZM8.33332 12.5H5.83332C4.45832 12.5 3.33332 11.375 3.33332 9.99998C3.33332 8.62498 4.45832 7.49998 5.83332 7.49998H8.33332C8.79166 7.49998 9.16666 7.12498 9.16666 6.66665C9.16666 6.20831 8.79166 5.83331 8.33332 5.83331H5.83332C3.53332 5.83331 1.66666 7.69998 1.66666 9.99998C1.66666 12.3 3.53332 14.1666 5.83332 14.1666H8.33332C8.79166 14.1666 9.16666 13.7916 9.16666 13.3333C9.16666 12.875 8.79166 12.5 8.33332 12.5Z" fill="white" />
+          </svg>
+        </p>
+        <br>
+        <br>
+        <svg xmlns="http://www.w3.org/2000/svg" width="636" height="2" viewBox="0 0 636 2" fill="none" style="color:var(--Divider, #828282);width:636px;">
+          <path d="M0 1H636" stroke="#828282" stroke-width="0.8" />
+        </svg>
+        <div class="class-schedule-container">
+          <h2>Class Schedule</h2>
+          <div class="class-time">
+            <span>Time:</span> 10:30am - 4:00pm (PST)
+          </div>
+          <div class="class-dates">
+            <span>Dates:</span>
+            <div class="dates-list">
+              <div class="date-item">Tue 6/15</div>
+              <div class="date-item">Tue 6/20</div>
+              <div class="date-item">Tue 6/24</div>
+              <div class="date-item">Tue 6/20</div>
+              <div class="date-item">Tue 6/24</div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+      </div>
+      <div class="second-half">
+        <img src="https://cdn.pixabay.com/photo/2023/10/30/07/30/lake-8352059_1280.jpg">
+        <br>
+        <br>
+        <span style="color:#00ACB4;">John Doe</span> , MFA, writes fiction and nonfiction with a special emphasis on the power of place. Her work has been anthologized and published in venues such as Atlas Obscura, The Los Angeles Times, The Sun, and Best Women’s Travel Writing. She loves to see her students surprise and delight themselves (and others!), whether she’s teaching at City University of New York, the San Francisco Women’s Jail, or The Writing Salon. After many years of living abroad (from Oaxaca to Quito to San Jose, Costa Rica), she now lives in San Francisco. She is also the author of Living Abroad in Costa Rica. <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button class="reviews-button">See John’s Reviews</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+    <div class="carousel-container">
+      <div class="carousel-slide" id="carouselSlide">
+        <div class="carousel-item">
+          <button class="carousel-button" id="prevBtn">&#10094;</button>
+          <div class="testimonial-text-container">
+            <div class="testimonial-quote quote-left">“</div>
+            <p class="testimonial-text"> &nbsp;&nbsp;Erin was a wonderful teacher. She was personable, kind, organized, <br>and great with facilitating group discussion. <br>
+              <br>
+              <span class="author">Katy L.</span>
+            </p>
+            <div class="testimonial-quote quote-right">”</div>
+          </div>
+          <button class="carousel-button" id="nextBtn">&#10095;</button>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <section class="similar-classes-container">
+      <h2 class="section-title">Similar Classes</h2>
+      <div class="classes-list">
+        <article class="class-item">
+          <h3 class="class-title">The Art of the Prose Sentence: Challenging Your Sentences to Do More</h3>
+          <a href="#" class="learn-more-link">Learn More ></a>
+        </article>
+        <article class="class-item">
+          <h3 class="class-title">The Art of the Prose Sentence: Challenging Your Sentences to Do More</h3>
+          <a href="#" class="learn-more-link">Learn More ></a>
+        </article>
+        <article class="class-item">
+          <h3 class="class-title">The Art of the Prose Sentence: Challenging Your Sentences to Do More</h3>
+          <a href="#" class="learn-more-link">Learn More ></a>
+        </article>
+      </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="remote-classes-container">
+      <h2 class="section-heading">About the Remote Classes</h2>
+      <p class="section-content">You will be able to participate in live class meetings via Zoom videoconference. To attend classes, you'll need a phone, tablet or computer and access to the internet. You can participate in the class from wherever you'd like, whether on your living room couch or in your office. Before your class meets, you'll receive an email from The Proprietary with more information about Zoom and your remote class. If you have any questions about remote learning, please don't hesitate to reach out to us at <span style="color:#00ACB4;">hello@wisdmlabs.com.</span>
+      </p>
+      <div class="section-links">
+        <a href="#" class="section-link">Learn About Our Classes <span class="fa fa-arrow-right"></span>
+        </a>
+        <a href="#" class="section-link">Questions? See FAQ <span class="fa fa-arrow-right"></span>
+        </a>
+      </div>
+      <br>
+    </div>
+    <hr style="width:100%;height: 2px;background-color:#434343;">
+    <div class="cancellation-policy-container">
+      <br>
+      <h2 class="cancellation-policy-title">Cancellation Policy</h2>
+      <p class="cancellation-policy-text">In the event of an emergency, we may consider a refund or credit, whether partial or full. We review these requests on a case-by-case basis, and we ask that you notify us as near as possible to the start date for the class. Please read our policy details before requesting a refund.</p>
+      <div class="cancellation-policy-rules">
+        <div class="rule">
+          <h3 class="rule-title">10 days or more</h3>
+          <p class="rule-description">before the start date for a class, the registrant will receive a credit minus a 10% fee OR a refund minus a 20% fee.</p>
+        </div>
+        <div class="rule">
+          <h3 class="rule-title">3-9 days</h3>
+          <p class="rule-description">before the start date for a class, the registrant will receive a credit minus a 20% fee OR a refund minus a 30% fee.</p>
+        </div>
+        <div class="rule">
+          <h3 class="rule-title">2 days or less</h3>
+          <p class="rule-description">before the start date for a class, the registrant will not receive a credit or a refund.</p>
+        </div>
+        <div class="rule">
+          <h3 class="rule-title">On the day or after</h3>
+          <p class="rule-description">The Proprietary cannot offer refunds, credits, or makeup sessions for classes a student might miss.</p>
+        </div>
+      </div>
+      <br>
+      <br>
+    </div>
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-nav">
+          <a href="#">Who We Are</a> / <a href="#">Gift A Class</a> / <a href="#">Membership</a> / <a href="#">Refund Policy</a> / <a href="#">FAQ</a>
+        </div>
+        <div class="footer-newsletter">
+          <h3>Get Our Latest News</h3>
+          <div class="input-group">
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p>2035 Sunset Lake Road, Suite B-2, Newark, Delaware, 19702 <br>
+          <br> Office Phone: <span style="color:#fff;">(510) 987-6543</span> Email: <span style="color:#fff;">hello@wisdmlabs.com </span>
+        </p>
+      </div>
+      <div class="footer-social">
+        <svg xmlns="http://www.w3.org/2000/svg" width="140" height="43" viewBox="0 0 140 43" fill="none">
+          <ellipse cx="70.5" cy="20.5176" rx="18.5" ry="19.4624" fill="#F39B4E" />
+          <path d="M89.9106 14.2152C92.5344 22.6905 89.6595 31.9752 82.7913 37.2126C75.9201 42.45 66.6185 42.45 59.7483 37.2126C52.8781 31.9752 50.0033 22.6905 52.628 14.2152C55.2518 5.74093 62.778 0.00292933 71.2688 0.00292933C79.7606 0.00393866 87.2868 5.74093 89.9106 14.2152ZM71.2688 1.85605C63.5426 1.85605 56.6946 7.07727 54.3074 14.7875C51.9201 22.4987 54.5353 30.9467 60.7861 35.7117C67.0378 40.4788 75.5008 40.4788 81.7535 35.7117C88.0033 30.9467 90.6185 22.4977 88.2313 14.7875C85.844 7.07727 78.995 1.85605 71.2688 1.85605Z" fill="#F39B4E" />
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M73.932 14.6591C74.4658 14.6389 74.9948 14.6541 75.5286 14.6541C75.594 14.6541 75.6595 14.6541 75.7489 14.6541V11.7501C75.4652 11.7219 75.168 11.6785 74.8708 11.6633C74.3254 11.6381 73.7791 11.6098 73.2328 11.623C72.3989 11.6411 71.6102 11.8541 70.9216 12.3719C70.1319 12.9684 69.6982 13.8062 69.5327 14.7944C69.4644 15.2011 69.4471 15.6251 69.4366 16.0389C69.4212 16.691 69.4346 17.341 69.4346 17.993V18.2373H66.7887V21.4794H69.4192V29.6279H72.6346V21.4925H75.2584C75.393 20.4135 75.5229 19.3466 75.6604 18.2353C75.4498 18.2353 75.2613 18.2343 75.0708 18.2353C74.3254 18.2383 72.6134 18.2353 72.6134 18.2353C72.6134 18.2353 72.6192 16.6284 72.6384 15.9309C72.6644 14.9771 73.204 14.6864 73.932 14.6591Z" fill="white" />
+          <path d="M39.993 14.5404C42.6764 23.2096 39.7362 32.7065 32.7112 38.0651C25.6823 43.4236 16.1671 43.4236 9.14017 38.0651C2.11321 32.7065 -0.827993 23.2096 1.85545 14.5404C4.53985 5.87122 12.2382 0.00292989 20.9242 0.00292989C29.6103 0.00292989 37.3096 5.87122 39.993 14.5404ZM20.9242 1.89847C13.0211 1.89847 6.01622 7.23988 3.5742 15.1268C1.13217 23.0148 3.80695 31.6558 10.202 36.5319C16.5951 41.408 25.2524 41.408 31.6484 36.5319C38.0405 31.6568 40.7172 23.0148 38.2752 15.1268C35.8322 7.23887 28.8274 1.89847 20.9242 1.89847Z" fill="#F39B4E" />
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M17.9541 25.6078C15.9343 25.5341 14.6725 24.012 14.3377 22.7756C14.8994 22.8886 15.4534 22.8664 16.0036 22.7241C16.019 22.7211 16.0315 22.71 16.0603 22.6969C14.9648 22.4294 14.1213 21.8157 13.5356 20.8255C13.147 20.1674 12.9604 19.4478 12.9662 18.6575C13.5115 18.9623 14.0819 19.1339 14.6955 19.151C13.8741 18.5293 13.3211 17.7168 13.096 16.6761C12.8729 15.6395 13.0172 14.6544 13.5135 13.7228C15.6179 16.3228 18.2812 17.7511 21.5292 17.9852C21.5071 17.8227 21.4821 17.6824 21.4676 17.5381C21.359 16.5782 21.5407 15.6839 22.0361 14.8704C22.6536 13.853 23.5384 13.2201 24.6714 13.0263C25.9776 12.8022 27.1192 13.1929 28.0753 14.1639C28.1368 14.2295 28.1907 14.2496 28.2811 14.2295C29.0794 14.0458 29.8325 13.744 30.5414 13.316C30.5587 13.3059 30.576 13.2968 30.5943 13.2887C30.5981 13.2877 30.6039 13.2877 30.6202 13.2877C30.3134 14.2355 29.7517 14.9673 28.9544 15.5073C29.7094 15.4195 30.4279 15.2105 31.1204 14.8956C31.1271 14.9027 31.13 14.9098 31.1367 14.9148C30.9867 15.1187 30.8424 15.3276 30.6895 15.5265C30.2778 16.0594 29.8036 16.5287 29.2766 16.9355C29.2323 16.9698 29.2093 17.0021 29.2131 17.0637C29.2333 17.6693 29.2112 18.2739 29.141 18.8735C28.9909 20.1412 28.6543 21.3504 28.1388 22.5061C27.6059 23.6992 26.9124 24.7751 26.0382 25.7219C24.556 27.3278 22.7728 28.3644 20.6953 28.8468C19.9826 29.0114 19.2603 29.0931 18.5303 29.1163C16.2893 29.1839 14.2175 28.5995 12.3102 27.3641C12.2862 27.349 12.2612 27.3318 12.2189 27.3025C13.575 27.4549 14.8658 27.2733 16.1065 26.7403C16.7653 26.4547 17.3761 26.0822 17.9541 25.6078Z" fill="white" />
+          <path d="M138.562 13.8912C141.125 22.1727 138.316 31.2444 131.604 36.3637C124.891 41.481 115.8 41.481 109.088 36.3637C102.374 31.2455 99.5649 22.1727 102.13 13.8912C104.694 5.60971 112.048 0.00293 120.346 0.00293C128.642 0.00293 135.997 5.60971 138.562 13.8912ZM120.346 1.81466C112.795 1.81466 106.104 6.91678 103.772 14.4514C101.438 21.9869 103.994 30.2422 110.102 34.8982C116.211 39.5562 124.481 39.5562 130.59 34.8982C136.697 30.2422 139.254 21.9869 136.921 14.4514C134.586 6.91678 127.897 1.81466 120.346 1.81466Z" fill="#F39B4E" />
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M126.077 12.1147H115.138C113.765 12.1147 112.651 13.2853 112.651 14.7265V26.204C112.651 27.6452 113.766 28.8135 115.138 28.8135H126.076C127.449 28.8135 128.563 27.6452 128.563 26.204V14.7276C128.564 13.2853 127.45 12.1147 126.077 12.1147ZM124.013 14.4175C124.013 14.1592 124.212 13.9529 124.46 13.9529H126.381C126.625 13.9529 126.824 14.1604 126.824 14.4175V16.4349C126.824 16.692 126.625 16.9006 126.381 16.9006H124.46C124.213 16.9006 124.013 16.6909 124.013 16.4349V14.4175ZM117.674 19.2597C118.134 18.0306 119.274 17.1589 120.607 17.1589C121.94 17.1589 123.082 18.0306 123.54 19.2597C123.681 19.633 123.758 20.039 123.758 20.4652C123.758 22.2898 122.347 23.7727 120.607 23.7727C118.869 23.7727 117.456 22.291 117.456 20.4652C117.456 20.0401 117.532 19.633 117.674 19.2597ZM126.879 26.204C126.879 26.6686 126.517 27.0475 126.077 27.0475H115.138C114.697 27.0475 114.335 26.6686 114.335 26.204V19.2597H115.907C115.816 19.6465 115.77 20.0503 115.77 20.4652C115.77 23.2698 117.934 25.5398 120.606 25.5398C123.277 25.5398 125.442 23.2698 125.442 20.4652C125.442 20.0503 125.396 19.6454 125.304 19.2597H126.876V26.204H126.879Z" fill="white" />
+        </svg>
+      </div>
+      <br>
+      <div class="footer-bottom">
+        <p>© 2022 All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy & Terms</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
