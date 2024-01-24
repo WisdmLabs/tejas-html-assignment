@@ -23,11 +23,10 @@ body {
   font-family: Inter;
   font-size: 24px;
   font-weight: bold;
-  background-color: #d9d9d9;
+  background-color: #d9d9d9; 
   width: 194px;
   height: 90px;
-  top: 37px;
-  left: 120px;
+  margin-left: 2em;
   line-height: 90px;
   text-align: center;
   margin-bottom: 1em;
@@ -36,8 +35,13 @@ body {
 
 .nav-actions {
   display: flex;
-  gap: 1em;
-  margin-left: 33em;
+  gap: 2em;
+  margin-left: 32em;
+  font-family: "PT sans";
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.32px;
+  word-wrap: break-word;
 }
 
 .nav-search,
@@ -52,7 +56,7 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.3em;
+  gap: 1.5em;
   align-items: center;
 }
 
@@ -88,8 +92,6 @@ body {
   margin: 2em 5em 0em 5em;
   padding: 1.5em;
   background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
   display: flex;
   flex-direction: column;
 }
@@ -103,6 +105,8 @@ body {
   font-weight: 900;
   line-height: 47px;
   color: #262626;
+  letter-spacing: 0.72px;
+  word-wrap: break-word;
   margin-bottom: 1em;
 }
 
@@ -112,6 +116,9 @@ body {
   font-size: 18px;
   font-family: "PT Sans";
   font-weight: 700px;
+  line-height: 27px;
+  letter-spacing: 0.36px;
+  word-wrap: break-word;
 }
 .level {
   background: var(
@@ -146,9 +153,7 @@ body {
 .workshop-details {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
-  padding: 1em 0;
+  padding: 1em 4em 0em 1em;
 }
 
 .workshop-details i {
@@ -172,7 +177,6 @@ body {
   align-items: center;
   background: #fff;
   color: #000;
-  padding: 1em;
   width: 100%;
   border-radius: 8px;
   flex-direction: row;
@@ -186,14 +190,12 @@ body {
 }
 .price-member,
 .price-non-member {
+  padding: 1em; 
   display: flex;
   flex-direction: column;
   height: 93px;
-  padding-right: 1em;
 }
-.price-member {
-  border-right: 2px solid #434343;
-}
+
 .label {
   font-size: 16px;
   color: #000;
@@ -212,9 +214,13 @@ body {
   color: #fff;
   border: none;
   height: 54px;
-  border-radius: 8px;
+  font-family: "PT Sans";
+  font-size: 21px;
+  margin-top: 0.2em;
+  border-radius:0px 0px 8px 8px;
   font-weight: bold;
-  cursor: pointer;
+  line-height: 28px;
+  letter-spacing: 0.42px;
   width: 100%;
 }
 
@@ -242,8 +248,11 @@ body {
   color: #434343;
 }
 .workshop-info .first-half .text {
+  font-family: "PT sans";
   line-height: 28px;
   font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.36px;
   font-size: 18px;
   padding-left: 1em;
 }
@@ -259,7 +268,7 @@ body {
   );
   float: right;
   font-family: "PT Sans";
-  font-weight: 400;
+  font-weight: 700;
   line-height: 25px;
   padding: 2em;
   width: 392px;
@@ -279,6 +288,14 @@ body {
   height: 22px;
   width: 22px;
   text-align: center;
+}
+.social-share-container{
+  display: flex;
+  align-items: center;
+}
+.social-icons {
+  display: flex;
+  gap: 10px;
 }
 .reviews-button {
   font-family: "PT Sans", sans-serif;
@@ -567,6 +584,7 @@ body {
   background-color: #434343;
   color: #ffffff;
   padding: 20px 40px;
+  height: 411px;
 }
 
 .footer-top {
