@@ -121,7 +121,7 @@ function setFlag(){
 
             if ($conn->query($sql) === TRUE) {
                 ?>
-                    <script>alert('User Registered Successfully');location.replace('UserLogin.php');</script>
+                    <script>alert('User Registered Successfully');location.replace('user-login.php');</script>
                 <?php
             } else {
                 ?>

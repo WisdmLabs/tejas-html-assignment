@@ -54,7 +54,7 @@ input[type=password]:focus,input[type=text]:focus,input[type=email]:focus{
 <br><br><br><br>
 <div class="LoginBox">
 <h1>Login</h1>
-<p>Don't have an account ?<a href="user-registration.php"> Sign Up</a></p><br><br>
+<p>Don't have an account ?<a href="UserRegistration.php"> Sign Up</a></p><br><br>
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" autocomplete="off" onsubmit="setFlag()">
 <label>Email </label><br><br><input type="email" name="email_of_user" required><br><br><br>
 <label>Password </label><br><br><input type="password" id="password" name="password_of_user" required><br>
