@@ -55,7 +55,7 @@ a{
 <body> <br>
 <div class="register-box"> 
 	<h1>Registration</h1>   
-	<p style="text-align:center;font-size:1.2em;">Already have an account ? <a href="UserLogin.php">Sign in </a></p> <br>    
+	<p style="text-align:center;font-size:1.2em;">Already have an account ? <a href="user-login.php">Sign in </a></p> <br>    
 		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" autocomplete="off" onsubmit="setFlag()">			
             <input type="text" id="firstname"  name="firstname" placeholder="Enter Your Firstname *" required><br>
 			<input type="text" id="lastname"  name="lastname" placeholder="Enter Your Lastname *" required><br> 
