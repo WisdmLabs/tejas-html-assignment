@@ -1,4 +1,4 @@
-Image - https://cdn.statically.io/gh/TheOdinProject/curriculum/81a5d553f4073e593d23a6ab00d50eef8620796d/foundations/html_css/project/imgs/01.png
+### Custom Theme 
+![custom_theme](https://github.com/WisdmLabs/tejas-html-assignment/assets/57285167/fdae9dd7-8630-4711-aa56-3ecb20284144)
 
-Fonts and Colors -
-https://cdn.statically.io/gh/TheOdinProject/curriculum/81a5d553f4073e593d23a6ab00d50eef8620796d/foundations/html_css/project/imgs/02.png
+
