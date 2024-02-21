@@ -1,0 +1,23 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "wdm-plugins/search-form",
+    "title": "Search Form",
+    "category": "widgets",
+    "description": "Adds a search form",
+    "keywords": ["search form"],
+    "version": "1",
+    "textdomain": "wdm-plugins",
+    "editorScript": "file:./index.js", 
+    "attributes": {
+      "bgColor":{
+        "type":"string",
+        "default":"#4eafcd"
+      },
+      "textColor":{
+        "type":"string",
+        "default":"#141e30"
+      }
+    },
+    "style": "file:./index.css"
+  }
