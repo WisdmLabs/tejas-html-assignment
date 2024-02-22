@@ -2,6 +2,9 @@
 
 function wdm_auth_modal_render_cb($attr)
 {
+    if (is_user_logged_in()) {
+        return '';
+    }
     ob_start();
 ?>
     <div class="wp-block-wdm-plugins-auth-modal">
