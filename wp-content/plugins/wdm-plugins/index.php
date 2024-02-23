@@ -40,3 +40,5 @@ add_action('create_cuisine', 'wdm_save_cuisine_meta');
 add_action('cuisine_edit_form_fields', 'wdm_cuisine_edit_form_fields');
 add_action('edited_cuisine', 'wdm_save_cuisine_meta');
 add_action('save_post_recipe', 'wdm_save_post_recipe');
+add_action('after_setup_theme', 'wdm_setup_theme');
+add_filter('image_size_names_choose', 'wdm_custom_image_sizes');

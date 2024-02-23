@@ -1,13 +1,13 @@
 import { registerBlockType } from "@wordpress/blocks";
 import { useBlockProps, RichText } from "@wordpress/block-editor";
-import { useEntityProp } from "@wordpress/core-data";
+import { __ } from "@wordpress/i18n";
 import { useSelect } from "@wordpress/data";
 import { Spinner } from "@wordpress/components";
-import { __ } from "@wordpress/i18n";
+import Rating from "@mui/material/Rating/index.js";
 import icons from "../../icons.js";
 import "./main.css";
-import block from "./block.json";
-registerBlockType(block.name, {
+
+registerBlockType("wdm-plugins/recipe-summary", {
   icon: {
     src: icons.primary,
   },
@@ -15,16 +15,45 @@ registerBlockType(block.name, {
     const { prepTime, cookTime, course } = attributes;
     const blockProps = useBlockProps();
     const { postId } = context;
-    const [termIDs] = useEntityProp("postType", "recipe", "cuisine", postId);
 
-    const { cuisines, isLoading } = useSelect((select) => {
-      const { getEntityRecords, isResolving } = select("core");
-      const taxonomyArgs = ["taxonomy", "cuisine", { include: termIDs }];
+    const { termIDs } = useSelect(
+      (select) => {
+        const { getEntityRecord } = select("core");
+
+        return {
+          termIDs: getEntityRecord("postType", "recipe", postId)?.cuisine || [],
+        };
+      },
+      [postId]
+    );
+
+    const { cuisines, isLoading } = useSelect(
+      (select) => {
+        const { getEntityRecords, isResolving } = select("core");
+
+        const taxonomyArgs = [
+          "taxonomy",
+          "cuisine",
+          {
+            include: termIDs,
+          },
+        ];
+
+        return {
+          cuisines: getEntityRecords(...taxonomyArgs),
+          isLoading: isResolving("getEntityRecords", taxonomyArgs),
+        };
+      },
+      [termIDs]
+    );
+    console.log(cuisines);
+    const { rating } = useSelect((select) => {
+      const { getCurrentPostAttribute } = select("core/editor");
+
       return {
-        cuisines: getEntityRecords(...taxonomyArgs),
-        isLoading: isResolving("getEntityRecords", taxonomyArgs),
+        rating: getCurrentPostAttribute("meta").recipe_rating,
       };
-    }, termIDs);
+    });
 
     return (
       <>
@@ -96,7 +125,9 @@ registerBlockType(block.name, {
             </div>
             <div className="recipe-metadata">
               <div className="recipe-title">{__("Rating", "wdm-plugins")}</div>
-              <div className="recipe-data"></div>
+              <div className="recipe-data">
+                <Rating value={rating} readOnly />
+              </div>
               <i className="bi bi-hand-thumbs-up"></i>
             </div>
           </div>

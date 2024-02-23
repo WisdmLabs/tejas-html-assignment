@@ -23,6 +23,12 @@ function wdm_register_blocks()
     [
       'name' => 'recipe-summary',
       'options' => ['render_callback' => 'wdm_recipe_summary_render_cb']
+    ],
+    [
+      'name' => 'team-members-group'
+    ],
+    [
+      'name' => 'team-member'
     ]
   ];
 
