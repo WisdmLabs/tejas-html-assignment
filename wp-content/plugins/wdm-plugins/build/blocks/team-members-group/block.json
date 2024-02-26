@@ -17,5 +17,33 @@
     }
   },
   "editorScript": "file:./index.js",
-  "style": "file:./index.css"
+  "style": "file:./index.css",
+  "providesContext": {
+    "wdm-plugins/image-shape": "imageShape"
+  },
+  "example": {
+    "attributes": {
+      "columns": 2
+    },
+    "innerBlocks": [
+      {
+        "name": "wdm-plugins/team-member",
+        "attributes": {
+          "name": "John Doe",
+          "title": "CEO of Udemy",
+          "bio": "This is sample description",
+          "imgURL": "https://picsum.photos/200/300?grayscale"
+        }
+      },
+      {
+        "name": "wdm-plugins/team-member",
+        "attributes": {
+          "name": "Jane Doe",
+          "title": "CEO of Udemy",
+          "bio": "This is sample description",
+          "imgURL": "https://picsum.photos/200/300?grayscale"
+        }
+      }
+    ]
+  }
 }

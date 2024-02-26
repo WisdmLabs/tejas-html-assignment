@@ -1,36 +1,76 @@
 {
-    "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/block.json",
-    "apiVersion": 2,
-    "name": "wdm-plugins/team-member",
-    "title": "Team Member",
-    "category": "text",
-    "description": "Adds a team member",
-    "textdomain": "wdm-plugins",
-    "attributes": {
-      "name": {
-        "type": "string"
-      },
-      "title": {
-        "type": "string"
-      },
-      "bio": {
-        "type": "string"
-      },
-      "imgID": {
-        "type": "number",
-        "default": 0
-      },
-      "imgAlt": {
-        "type": "string",
-        "default": ""
-      },
-      "imgURL": {
-        "type": "string"
-      },
-      "socialHandles": {
-        "type": "array"
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/block.json",
+  "apiVersion": 2,
+  "name": "wdm-plugins/team-member",
+  "title": "Team Member",
+  "category": "text",
+  "description": "Adds a team member",
+  "textdomain": "wdm-plugins",
+  "attributes": {
+    "name": {
+      "type": "string",
+      "source": "html",
+      "selector": ".author-meta strong"
+    },
+    "title": {
+      "type": "string",
+      "source": "html",
+      "selector": ".author-meta span"
+    },
+    "bio": {
+      "type": "string",
+      "source": "html",
+      "selector": ".member-bio p"
+    },
+    "imgID": {
+      "type": "number",
+      "default": 0
+    },
+    "imgAlt": {
+      "type": "string",
+      "default": "",
+      "source": "attribute",
+      "selector": "img",
+      "attribute": "alt"
+    },
+    "imgURL": {
+      "type": "string",
+      "default": "",
+      "source": "attribute",
+      "selector": "img",
+      "attribute": "src"
+    },
+    "socialHandles": {
+      "type": "array",
+      "default": [
+        {
+          "url": "https://facebook.com",
+          "icon": "facebook"
+        },
+        {
+          "url": "https://instagram.com",
+          "icon": "instagram"
+        }
+      ],
+      "source": "query",
+      "selector": ".social-links a",
+      "query": {
+        "url": {
+          "source": "attribute",
+          "attribute": "href"
+        },
+        "icon": {
+          "source": "attribute",
+          "attribute": "data-icon"
+        }
       }
     },
-    "editorScript": "file:./index.js",
-    "style": "file:./index.css"
-  }
+    "imageShape": {
+      "type": "string",
+      "default": "hexagon"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./index.css",
+  "usesContext": ["wdm-plugins/image-shape"]
+}

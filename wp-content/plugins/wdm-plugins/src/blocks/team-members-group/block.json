@@ -1,21 +1,49 @@
 {
-    "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/block.json",
-    "apiVersion": 2,
-    "name": "wdm-plugins/team-members-group",
-    "title": "Team Members Group",
-    "category": "text",
-    "description": "Adds a group for adding team members",
-    "textdomain": "wdm-plugins",
-    "attributes": {
-      "columns": {
-        "type": "number",
-        "default": 3
-      },
-      "imageShape": {
-        "type": "string",
-        "default": "hexagon"
-      }
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/block.json",
+  "apiVersion": 2,
+  "name": "wdm-plugins/team-members-group",
+  "title": "Team Members Group",
+  "category": "text",
+  "description": "Adds a group for adding team members",
+  "textdomain": "wdm-plugins",
+  "attributes": {
+    "columns": {
+      "type": "number",
+      "default": 3
     },
-    "editorScript": "file:./index.js",
-    "style": "file:./index.css"
+    "imageShape": {
+      "type": "string",
+      "default": "hexagon"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./index.css",
+  "providesContext": {
+    "wdm-plugins/image-shape": "imageShape"
+  },
+  "example": {
+    "attributes": {
+      "columns": 2
+    },
+    "innerBlocks": [
+      {
+        "name": "wdm-plugins/team-member",
+        "attributes": {
+          "name": "John Doe",
+          "title": "CEO of Udemy",
+          "bio": "This is sample description",
+          "imgURL": "https://picsum.photos/200/300?grayscale"
+        }
+      },
+      {
+        "name": "wdm-plugins/team-member",
+        "attributes": {
+          "name": "Jane Doe",
+          "title": "CEO of Udemy",
+          "bio": "This is sample description",
+          "imgURL": "https://picsum.photos/200/300?grayscale"
+        }
+      }
+    ]
   }
+}
