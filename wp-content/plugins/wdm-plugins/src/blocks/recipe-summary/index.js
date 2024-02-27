@@ -46,7 +46,7 @@ registerBlockType("wdm-plugins/recipe-summary", {
       },
       [termIDs]
     );
-    console.log(cuisines);
+
     const { rating } = useSelect((select) => {
       const { getCurrentPostAttribute } = select("core/editor");
 
@@ -54,7 +54,6 @@ registerBlockType("wdm-plugins/recipe-summary", {
         rating: getCurrentPostAttribute("meta").recipe_rating,
       };
     });
-
     return (
       <>
         <div {...blockProps}>

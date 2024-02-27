@@ -29,7 +29,15 @@ function wdm_register_blocks()
     ],
     [
       'name' => 'team-member'
-    ]
+    ],
+    [
+      'name' => 'popular-recipes',
+      'options' => ['render_callback' => 'wdm_popular_recipes_cb']
+    ],
+    [
+      'name' => 'daily-recipe',
+      'options' => ['render_callback' => 'wdm_daily_recipe_cb']
+    ],
   ];
 
   foreach ($blocks as $block) {

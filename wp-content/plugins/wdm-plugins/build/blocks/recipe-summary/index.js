@@ -12631,7 +12631,6 @@ __webpack_require__.r(__webpack_exports__);
         isLoading: isResolving("getEntityRecords", taxonomyArgs)
       };
     }, [termIDs]);
-    console.log(cuisines);
     const {
       rating
     } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_4__.useSelect)(select => {

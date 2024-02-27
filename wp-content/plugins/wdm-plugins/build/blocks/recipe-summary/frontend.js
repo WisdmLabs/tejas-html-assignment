@@ -12454,6 +12454,19 @@ function RecipeRating(props) {
     }
   });
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const block = document.querySelector("#recipe-rating");
+  const postID = parseInt(block.dataset.postId);
+  const avgRating = parseFloat(block.dataset.avgRating);
+  const loggedIn = !!block.dataset.loggedIn;
+  const ratingCount = !!parseInt(block.dataset.ratingCount);
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.render)((0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(RecipeRating, {
+    postID: postID,
+    avgRating: avgRating,
+    loggedIn: loggedIn,
+    ratingCount: ratingCount
+  }), block);
+});
 })();
 
 /******/ })()

@@ -19,6 +19,7 @@ if (!function_exists('add_action')) {
 
 //setup
 define('WDM_PLUGIN_DIR', plugin_dir_path(__FILE__));
+define('WDM_PLUGIN_FILE', __FILE__);
 
 //includes
 $directory = glob(WDM_PLUGIN_DIR . 'includes/*.php');
@@ -42,3 +43,6 @@ add_action('edited_cuisine', 'wdm_save_cuisine_meta');
 add_action('save_post_recipe', 'wdm_save_post_recipe');
 add_action('after_setup_theme', 'wdm_setup_theme');
 add_filter('image_size_names_choose', 'wdm_custom_image_sizes');
+add_filter('rest_recipe_query', 'wdm_rest_recipe_query', 10, 2);
+add_action('admin_menu', 'wdm_admin_menus');
+add_action('admin_post_wdm_save_options', 'wdm_save_options');

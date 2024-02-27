@@ -6,8 +6,9 @@ function wdm_recipe_summary_render_cb($atts, $content, $block)
     $cookTime = isset($atts['cookTime']) ? esc_html($atts['cookTime']) : '';
     $course = isset($atts['course']) ? esc_html($atts['course']) : '';
 
-    $postID = $block->context["postId"];
+    $postID = $block->context['postId'];
     $postTerms = get_the_terms($postID, "cuisine");
+
     $postTerms = is_array($postTerms) ? $postTerms : [];
     $cuisines = '';
     $lastKey = array_key_last($postTerms);
@@ -16,10 +17,10 @@ function wdm_recipe_summary_render_cb($atts, $content, $block)
     foreach ($postTerms as $key => $term) {
         $url = get_term_meta($term->term_id, 'more_info_url', true);
         $comma = $key === $lastKey ? '' : ',';
+
         $cuisines .= "
       <a href='{$url}' target='_blank'>{$term->name}</a>{$comma} ";
     }
-
     $rating = get_post_meta($postID, 'recipe_rating', true);
 
     global $wpdb;

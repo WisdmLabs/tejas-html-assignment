@@ -1,6 +1,7 @@
 import Rating from "@mui/material/Rating/index.js";
 import { render, useState, useEffect } from "@wordpress/element";
 import apiFetch from "@wordpress/api-fetch";
+
 function RecipeRating(props) {
   const [avgRating, setAvgRating] = useState(props.avgRating);
   const [permission, setPermission] = useState(props.loggedIn);
@@ -40,3 +41,21 @@ function RecipeRating(props) {
     />
   );
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const block = document.querySelector("#recipe-rating");
+  const postID = parseInt(block.dataset.postId);
+  const avgRating = parseFloat(block.dataset.avgRating);
+  const loggedIn = !!block.dataset.loggedIn;
+  const ratingCount = !!parseInt(block.dataset.ratingCount);
+
+  render(
+    <RecipeRating
+      postID={postID}
+      avgRating={avgRating}
+      loggedIn={loggedIn}
+      ratingCount={ratingCount}
+    />,
+    block
+  );
+});
