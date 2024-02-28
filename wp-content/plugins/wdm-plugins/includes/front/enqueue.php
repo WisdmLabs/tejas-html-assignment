@@ -11,4 +11,6 @@ function wdm_enqueue_scripts()
         "const wdm_auth_rest = {$authURLs}",
         'before'
     );
+
+    wp_enqueue_style("wdm_editor");
 }

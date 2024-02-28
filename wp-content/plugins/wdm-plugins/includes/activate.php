@@ -20,6 +20,7 @@ function wdm_activate_plugin()
       ) ENGINE='InnoDB' {$charsetCollate}";
     require_once(ABSPATH . "/wp-admin/includes/upgrade.php");
     dbDelta($sql);
+
     $options = get_option('wdm_options');
     if (!$options) {
         add_option('wdm_options', [

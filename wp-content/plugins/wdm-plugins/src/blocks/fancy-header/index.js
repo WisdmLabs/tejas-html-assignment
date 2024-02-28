@@ -1,30 +1,32 @@
-import { registerBlockType } from '@wordpress/blocks'
-import icons from '../../icons'
-import { 
-  RichText, useBlockProps, InspectorControls
-} from '@wordpress/block-editor'
-import { __ } from '@wordpress/i18n'
-import { PanelBody, ColorPalette } from '@wordpress/components'
-import block from './block.json'
-import './main.css'
+import { registerBlockType } from "@wordpress/blocks";
+import icons from "../../icons.js";
+import {
+  RichText,
+  useBlockProps,
+  InspectorControls,
+} from "@wordpress/block-editor";
+import { __ } from "@wordpress/i18n";
+import { PanelBody, ColorPalette } from "@wordpress/components";
+import block from "./block.json";
+import "./main.css";
 
 registerBlockType(block.name, {
-  icons:icons.primary,
+  icons: icons.primary,
   edit({ attributes, setAttributes }) {
-    const { content, underline_color } = attributes
-    const blockProps = useBlockProps()
+    const { content, underline_color } = attributes;
+    const blockProps = useBlockProps();
 
     return (
       <>
         <InspectorControls>
-          <PanelBody title={__('Colors', 'udemy-plus')}>
-            <ColorPalette 
+          <PanelBody title={__("Colors", "udemy-plus")}>
+            <ColorPalette
               colors={[
-                { name: 'Red', color: '#f87171' },
-                { name: 'Indigo', color: '#818cf8' }
+                { name: "Red", color: "#f87171" },
+                { name: "Indigo", color: "#818cf8" },
               ]}
               value={underline_color}
-              onChange={newVal => setAttributes({ underline_color: newVal })}
+              onChange={(newVal) => setAttributes({ underline_color: newVal })}
             />
           </PanelBody>
         </InspectorControls>
@@ -32,33 +34,27 @@ registerBlockType(block.name, {
           <RichText
             className="fancy-header"
             tagName="h2"
-            placeholder={__('Enter Heading', 'udemy-plus')}
+            placeholder={__("Enter Heading", "udemy-plus")}
             value={content}
-            onChange={newVal => setAttributes({ content: newVal })}
-            allowedFormats={['core/bold', 'core/italic']}
+            onChange={(newVal) => setAttributes({ content: newVal })}
+            allowedFormats={["core/bold", "core/italic"]}
           />
         </div>
       </>
-    )
+    );
   },
   save({ attributes }) {
-    const { content, underline_color } = attributes
+    const { content, underline_color } = attributes;
     const blockProps = useBlockProps.save({
-      className: 'fancy-header',
+      className: "fancy-header",
       style: {
-        'background-image': `
+        "background-image": `
           linear-gradient(transparent, transparent),
           linear-gradient(${underline_color}, ${underline_color});
-        `
-      }
-    })
+        `,
+      },
+    });
 
-    return (
-      <RichText.Content
-        {...blockProps}
-        tagName="h2"
-        value={content}
-      />
-    )
-  }
-})
+    return <RichText.Content {...blockProps} tagName="h2" value={content} />;
+  },
+});

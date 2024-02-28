@@ -1,5 +1,5 @@
 <?php
-function wdm_plugins_options_page()
+function wdm_plugin_options_page()
 {
     $options = get_option('wdm_options');
 ?>

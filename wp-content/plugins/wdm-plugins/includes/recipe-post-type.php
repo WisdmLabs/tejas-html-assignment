@@ -70,4 +70,47 @@ function wdm_recipe_post_type()
         'show_in_rest' => true,
         'default' => 0
     ]);
+
+    register_post_meta('', 'og_title', [
+        'single' => true,
+        'show_in_rest' => true,
+        'type' => 'string',
+        'sanitize_callback' => 'sanitize_text_field',
+        'auth_callback' => function () {
+            return current_user_can('edit_posts');
+        }
+    ]);
+
+
+    register_post_meta('', 'og_description', [
+        'single' => true,
+        'show_in_rest' => true,
+        'type' => 'string',
+        'sanitize_callback' => 'sanitize_text_field',
+        'auth_callback' => function () {
+            return current_user_can('edit_posts');
+        }
+    ]);
+
+
+    register_post_meta('', 'og_image', [
+        'single' => true,
+        'show_in_rest' => true,
+        'type' => 'string',
+        'sanitize_callback' => 'sanitize_text_field',
+        'auth_callback' => function () {
+            return current_user_can('edit_posts');
+        }
+    ]);
+
+    register_post_meta('', 'og_override_image', [
+        'single' => true,
+        'show_in_rest' => true,
+        'type' => 'boolean',
+        'default' => false,
+        'sanitize_callback' => 'sanitize_text_field',
+        'auth_callback' => function () {
+            return current_user_can('edit_posts');
+        }
+    ]);
 }
