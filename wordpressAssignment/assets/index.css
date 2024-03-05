@@ -229,13 +229,23 @@ li a {
 }
 
 .workshop-info {
-  height: 1070px;
+  height: 950px;
   margin: 2em 5em 0em 5em;
   background-color: #fff;
 }
 .workshop-info .first-half {
+  float: left;
+  width: 680px;
+  height: auto;
   padding: 2em;
   color: #434343;
+}
+.workshop-info .second-half img {
+  width: 146px;
+  height: 146px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin-left: 6em;
 }
 .workshop-info .first-half .text {
   font-family: "PT sans";
@@ -279,6 +289,15 @@ li a {
   cursor: pointer;
 }
 
+.social-share-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+}
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
 .class-schedule-container {
   background-color: #ffffff;
   margin: 1em;
@@ -404,7 +423,7 @@ li a {
 
 .similar-classes-container {
   width: 1190px;
-  margin-left: 5em;
+  margin: 2em 0em 0em 5em;
   background-color: #fff;
   padding: 20px;
   box-sizing: border-box;
@@ -454,6 +473,7 @@ li a {
   color: #434343;
   background-color: #fff;
   padding: 30px 90px;
+  margin-top: 4em;
 }
 
 .section-heading {
