@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "title": "Wordpress Assignment",
+  "version": 2,
+  "description": "Assignment for wordpress",
+  "settings": {
+    "layout": {
+      "allowCustomContentAndWideSize": true
+    },
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "appearanceTools": true,
+    "color": {
+      "custom": true,
+      "background": true
+    }
+  },
+
+  "templateParts": [
+    {
+      "name": "header",
+      "area": "header",
+      "title": "Header"
+    },
+    {
+      "name": "footer",
+      "area": "footer",
+      "title": "Footer"
+    }
+  ]
+}
