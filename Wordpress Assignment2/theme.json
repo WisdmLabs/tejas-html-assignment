@@ -1,0 +1,29 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "title": "Wordpress Assignment2",
+  "version": 2,
+  "description": "Assignment for wordpress",
+  "settings": {
+    "layout": {
+      "allowEditing": true,
+      "allowCustomContentAndWideSize": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true
+    },
+    "appearanceTools": true,
+    "color": {
+      "custom": true,
+      "background": true
+    }
+  },
+  "styles": {
+    "spacing": {
+      "margin": {
+        "left": "2em",
+        "right": "2em"
+      }
+    }
+  }
+}
