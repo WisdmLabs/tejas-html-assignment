@@ -1,4 +1,3 @@
-Image - https://cdn.statically.io/gh/TheOdinProject/curriculum/81a5d553f4073e593d23a6ab00d50eef8620796d/foundations/html_css/project/imgs/01.png
+### Output 
+![wpassignment-local](https://github.com/WisdmLabs/tejas-html-assignment/assets/57285167/91a0e644-2717-40ba-b808-c3887d9952f0)
 
-Fonts and Colors -
-https://cdn.statically.io/gh/TheOdinProject/curriculum/81a5d553f4073e593d23a6ab00d50eef8620796d/foundations/html_css/project/imgs/02.png
