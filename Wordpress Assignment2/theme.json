@@ -4,26 +4,60 @@
   "version": 2,
   "description": "Assignment for wordpress",
   "settings": {
-    "layout": {
-      "allowEditing": true,
-      "allowCustomContentAndWideSize": true
+    "blocks": {
+      "core/navigation": {
+        "spacing": {
+          "margin": true,
+          "padding": true
+        }
+      }
+    },
+    "color": {
+      "defaultPalette": true,
+      "background": true,
+      "text": true,
+      "link": true,
+      "custom": true
+    },
+
+    "typography": {
+      "fontWeight": true,
+      "letterSpacing": true,
+      "customFontSize": true,
+      "fontStyle": true,
+      "fontFamilies": [
+        {
+          "fontFamily": "PT Sans,Sans serif",
+          "name": "PT Sans,Sans serif",
+          "slug": "PT Sans,Sans serif"
+        },
+        {
+          "fontFamily": "Inter",
+          "name": "Inter",
+          "slug": "Inter"
+        },
+        {
+          "fontFamily": "Montserrat",
+          "name": "Montserrat",
+          "slug": "Montserrat"
+        },
+        {
+          "fontFamily": "PT Sans",
+          "name": "PT Sans",
+          "slug": "PT Sans"
+        }
+      ]
     },
     "spacing": {
       "margin": true,
       "padding": true
     },
-    "appearanceTools": true,
-    "color": {
-      "custom": true,
-      "background": true
-    }
+    "appearanceTools": true
   },
   "styles": {
-    "spacing": {
-      "margin": {
-        "left": "2em",
-        "right": "2em"
-      }
-    }
+    "color": {
+      "background": "#ececec"
+    },
+    "spacing": {}
   }
 }
