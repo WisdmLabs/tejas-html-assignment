@@ -6,7 +6,7 @@ Version: 1.0
 Author: Tejas
 */
 
-add_action('woocommerce_checkout_after_customer_details', 'custom_checkout_datepicker');
+add_action('woocommerce_checkout_shipping', 'custom_checkout_datepicker');
 
 function custom_checkout_datepicker()
 {
