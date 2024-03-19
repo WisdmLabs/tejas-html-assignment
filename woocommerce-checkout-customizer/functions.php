@@ -1,14 +1,23 @@
 <?php
 /*
-Plugin Name: Custom Plugin
-Description: Customizations for WooCommerce checkout.
+Plugin Name: Woocommerce Checkout Customizer
+Description: Adding custom datepicker and custom email for the checkout
 Version: 1.0
-Author: Tejas
+Author: Wisdmlabs
+Author URI: https://wisdmlabs.com
+Text Domain : wdm
 */
 
-add_action('woocommerce_checkout_shipping', 'custom_checkout_datepicker');
 
-function custom_checkout_datepicker()
+add_action('plugins_loaded', 'wdm_load_custom_translation');
+function wdm_load_custom_translation()
+{
+	load_plugin_textdomain('wdm', false, dirname(plugin_basename(__FILE__)) . '/languages/');
+}
+
+add_action('woocommerce_checkout_shipping', 'wdm_custom_checkout_datepicker');
+/* This function will add a datepicker field in the checkout page, after the shipping */
+function wdm_custom_checkout_datepicker()
 {
 	echo '<div class="custom-datepicker" style="width:53%;">';
 	woocommerce_form_field('pickup_date', array(
@@ -19,8 +28,11 @@ function custom_checkout_datepicker()
 	echo '</div>';
 }
 
-add_action('woocommerce_checkout_update_order_meta', 'save_pickup_date');
-function save_pickup_date($order_id)
+add_action('woocommerce_checkout_update_order_meta', 'wdm_save_pickup_date');
+/* 
+This function will save the pickup date to postmeta
+*/
+function wdm_save_pickup_date($order_id)
 {
 	if (isset($_POST['pickup_date']) && !empty($_POST['pickup_date'])) {
 		$pickup_date = sanitize_text_field($_POST['pickup_date']);
@@ -28,8 +40,11 @@ function save_pickup_date($order_id)
 	}
 }
 
-add_action('woocommerce_thankyou', 'display_pickup_date', 10, 1);
-function display_pickup_date($order_id)
+add_action('woocommerce_thankyou', 'wdm_display_pickup_date', 10, 1);
+/* 
+This function will show the pickup date on the thank you/order-received page
+*/
+function wdm_display_pickup_date($order_id)
 {
 	$pickup_date = get_post_meta($order_id, 'pickup_date', true);
 
@@ -41,8 +56,12 @@ function display_pickup_date($order_id)
 }
 
 
-add_action('woocommerce_thankyou', 'send_custom_order_confirmation_email', 10, 1);
-function send_custom_order_confirmation_email($order_id)
+add_action('woocommerce_thankyou', 'wdm_send_custom_order_confirmation_email', 10, 1);
+/*
+This function will send the custom email to customer after order confirmation
+The email will contain the pickup date and store address as well
+*/
+function wdm_send_custom_order_confirmation_email($order_id)
 {
 	$address = [
 		"Baner Store" => " 202, Second Floor, Akshay Vaibhav, Survey Number:287/8, near Solaris Club, Riviresa Society, Baner, Pune, Maharashtra 411045",
@@ -69,7 +88,8 @@ function send_custom_order_confirmation_email($order_id)
 		default:
 			$store_address = "Katraj Pune";
 	}
-	$subject = 'Order Confirmation';
+	$subject = "Order Confirmation";
+
 	$message = '<br>Thank you for your order. <br>Your order Total : ' . $order_total . '<br>Order Pickup Date: ' . $pickup_date . '<br>Store Address: ' . $store_address;
 	wp_mail($customer_email, $subject, $message);
 	update_post_meta($order_id, 'store_address', $store_address);
@@ -79,15 +99,20 @@ function send_custom_order_confirmation_email($order_id)
 		wp_schedule_single_event(strtotime($reminder_date), 'send_pickup_reminder_email', array($order_id));
 	}
 }
-add_action('send_pickup_reminder_email', 'send_pickup_reminder_email_callback');
-function send_pickup_reminder_email_callback($order_id)
+add_action('send_pickup_reminder_email', 'wdm_send_pickup_reminder_email_callback');
+
+/* 
+This function will send the reminder email to customer 
+before 1 day to pickup the order from store
+*/
+function wdm_send_pickup_reminder_email_callback($order_id)
 {
 	$order = wc_get_order($order_id);
 	$pickup_date = get_post_meta($order_id, 'pickup_date', true);
 	$store_address = get_post_meta($order_id, 'store_address', true);
 	$customer_email = $order->get_billing_email();
 
-	$subject = 'Reminder: Pickup Date Tomorrow';
+	$subject = __('Reminder: Pickup Date Tomorrow', "wdm");
 	$message = "Hello " . $order->get_billing_first_name() . " ,<br>";
 	$message .= "Your pickup date is scheduled for " . $pickup_date . "<br>";
 	$message .= "Store Address : " . $store_address . "<br><br>Thank you";
