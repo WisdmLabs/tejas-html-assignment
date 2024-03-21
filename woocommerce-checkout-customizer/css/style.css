@@ -1,0 +1,28 @@
+.term_conditions_div {
+  height: 10em;
+  width: 50%;
+  padding: 2em;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  animation: popup 0.5s ease-in-out forwards;
+}
+@keyframes popup {
+  from {
+    top: 10%;
+  }
+  to {
+    top: 70%;
+  }
+}
+.closeBtn {
+  background-color: inherit;
+  float: right;
+  box-shadow: none;
+}
+.closeBtn:hover {
+  background: inherit;
+}
